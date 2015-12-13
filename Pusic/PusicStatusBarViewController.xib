@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PusicStatusBarViewController">
+            <connections>
+                <outlet property="currentTime" destination="71e-KI-MD6" id="ifU-jP-rfL"/>
+                <outlet property="musicAlbume" destination="aHM-lm-BO6" id="37H-C6-C9Q"/>
+                <outlet property="musicCover" destination="lCM-KB-oHi" id="hk7-TR-pg8"/>
+                <outlet property="musicName" destination="Vud-BE-21R" id="ToS-JS-8qs"/>
+                <outlet property="musicTime" destination="5zD-eG-gcA" id="fLT-3k-SFL"/>
+                <outlet property="next" destination="zPY-rk-umx" id="Kbe-Ks-CE3"/>
+                <outlet property="play" destination="jBc-rt-PMX" id="h9Y-O7-GTl"/>
+                <outlet property="pro" destination="rKI-Sh-Jum" id="JI2-Wr-NjR"/>
+                <outlet property="repeatButton" destination="G4X-je-ylI" id="7fI-hi-sb7"/>
+                <outlet property="shuffleButton" destination="thv-Wz-OcP" id="MTg-eX-Cug"/>
+                <outlet property="songListButton" destination="D24-nl-vHR" id="i0F-Ch-myn"/>
+                <outlet property="songerName" destination="I4F-lw-z2h" id="1zy-2v-jDu"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lCM-KB-oHi">
+                    <rect key="frame" x="13" y="11" width="60" height="60"/>
+                    <animations/>
+                    <imageCell key="cell" continuous="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="music_cover_default" id="TMF-w9-eb7"/>
+                </imageView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKI-Sh-Jum">
+                    <rect key="frame" x="242" y="11" width="22" height="21"/>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="state_por_normal" imagePosition="only" alignment="center" alternateImage="state_por_pressed" continuous="YES" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="c1n-kI-LAx">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="proMusic:" target="-2" id="Bwe-1L-kF2"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBc-rt-PMX">
+                    <rect key="frame" x="284" y="11" width="25" height="21"/>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="state_play_normal" imagePosition="only" alignment="center" alternateImage="state_play_puse_normal" continuous="YES" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="k1a-iE-xlC">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="palyMuisc:" target="-2" id="FNL-Jk-uCv"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPY-rk-umx">
+                    <rect key="frame" x="321" y="11" width="22" height="21"/>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="state_next_normal" imagePosition="only" alignment="center" alternateImage="state_next_pressed" continuous="YES" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="390-W2-jZN">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="nextMusic:" target="-2" id="5M2-Aq-AnP"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vud-BE-21R">
+                    <rect key="frame" x="84" y="53" width="148" height="18"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="歌曲名" id="hGR-9z-vGh">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-lm-BO6">
+                    <rect key="frame" x="84" y="11" width="148" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="专辑" allowsEditingTextAttributes="YES" id="RSO-Bw-Ire">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4F-lw-z2h">
+                    <rect key="frame" x="84" y="31" width="148" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="歌手" id="vYc-Fh-tRA">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thv-Wz-OcP">
+                    <rect key="frame" x="241" y="55" width="28" height="15"/>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Shuffle_normal" imagePosition="only" alignment="center" alternateImage="Shuffle_press" refusesFirstResponder="YES" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="suU-1c-eTL">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="shufflePlay:" target="-2" id="ogr-vL-lTc"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4X-je-ylI">
+                    <rect key="frame" x="317" y="55" width="28" height="15"/>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Repeat_normal" imagePosition="only" alignment="center" alternateImage="Repeat_press" refusesFirstResponder="YES" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="e5q-MJ-NAy">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="repeatPlay:" target="-2" id="uDD-nC-bjW"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D24-nl-vHR">
+                    <rect key="frame" x="282" y="55" width="28" height="15"/>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Songlist_normal" imagePosition="only" alignment="center" alternateImage="Songlist_press" refusesFirstResponder="YES" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="mJv-y8-f0t">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="listPlay:" target="-2" id="Hk4-ut-I1a"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zD-eG-gcA">
+                    <rect key="frame" x="321" y="34" width="22" height="11"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="时间" id="B9m-Tx-Sin">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71e-KI-MD6">
+                    <rect key="frame" x="240" y="34" width="22" height="11"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0:00" id="75t-WZ-EX2">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <animations/>
+            <point key="canvasLocation" x="285.5" y="320"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Repeat_normal" width="33" height="26"/>
+        <image name="Repeat_press" width="33" height="26"/>
+        <image name="Shuffle_normal" width="31" height="23"/>
+        <image name="Shuffle_press" width="31" height="23"/>
+        <image name="Songlist_normal" width="42" height="23"/>
+        <image name="Songlist_press" width="42" height="23"/>
+        <image name="music_cover_default" width="128" height="128"/>
+        <image name="state_next_normal" width="40" height="40"/>
+        <image name="state_next_pressed" width="40" height="40"/>
+        <image name="state_play_normal" width="40" height="40"/>
+        <image name="state_play_puse_normal" width="40" height="40"/>
+        <image name="state_por_normal" width="40" height="40"/>
+        <image name="state_por_pressed" width="40" height="40"/>
+        <sound name="Pop"/>
+    </resources>
+</document>
